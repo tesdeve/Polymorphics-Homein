@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Principal:</strong>
+  <%= @residente.principal %>
+</p>
+
+<%= render partial: "detallespersonas/detallespersonas", locals: {personable: @residente} %>
+<%= render partial: "detallespersonas/form", locals: {personable: @residente} %>
+
+<%= link_to 'Edit', edit_residente_path(@residente) %> |
+<%= link_to 'Back', residentes_path %>

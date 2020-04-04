@@ -1,0 +1,2 @@
+module DetallespersonasHelper
+end

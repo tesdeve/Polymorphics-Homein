@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detallespersonas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Personable</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Cedula</th>
+      <th>Huella digital</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @detallespersonas.each do |detallespersona| %>
+      <tr>
+        <td><%= detallespersona.personable_id %></td>
+        <td><%= detallespersona.nombre %></td>
+        <td><%= detallespersona.apellido %></td>
+        <td><%= detallespersona.edad %></td>
+        <td><%= detallespersona.cedula %></td>
+        <td><%= detallespersona.huella_digital %></td>
+        <td><%= link_to 'Show', detallespersona %></td>
+        <td><%= link_to 'Edit', edit_detallespersona_path(detallespersona) %></td>
+        <td><%= link_to 'Destroy', detallespersona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Detallespersona', new_detallespersona_path %>
