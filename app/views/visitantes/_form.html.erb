@@ -1,4 +1,5 @@
-<%= form_with(model: visitante, local: true) do |form| %>
+<div class="card-body"> 
+  <%= form_with(model: visitante, local: true) do |form| %>
   <% if visitante.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(visitante.errors.count, "error") %> prohibited this visitante from being saved:</h2>
@@ -10,8 +11,31 @@
       </ul>
     </div>
   <% end %>
+    
+    <%= render 'visitantes/detallespersona', form: form %>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  
+  <% end %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+
+
+<%#= render partial: "detallespersonas/form", form: form, locals: {personable: @visitante} %>
+ 
+
+      <%#= render partial: "detallespersonas/form", locals: {personable: @visitante} Unable to make it work %> 
+
+      <%#=  NO GOOD  form.fields_for :detallespersonas do |f| %>
+       <%#= form.fields_for :detallespersonas, detallespersonas[0].present? ? detallespersonas[0] : Detallespersonas.new do |f|  NO GOOD %>
+
+      <%#= form.fields_for :locations, @user.locations[0].present? ? @user.locations[0] : Location.new  do |f| NO GOOD%>
+
+
+
+     <%#= form.fields_for :detallespersonas, @visitante.detallespersonas.last.present? ? @visitante.detallespersonas.last : @visitante.detallespersonas.new do |f| %>
+
+        <%#= f.label :nombre %>
+        <%#= f.text_field :nombre %>
+      <%# end %>

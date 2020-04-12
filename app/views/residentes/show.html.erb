@@ -1,12 +1,62 @@
 <p id="notice"><%= notice %></p>
 
+<h3> Detalles Personales </h3>
 <p>
   <strong>Principal:</strong>
   <%= @residente.principal %>
 </p>
 
-<%= render partial: "detallespersonas/detallespersonas", locals: {personable: @residente} %>
-<%= render partial: "detallespersonas/form", locals: {personable: @residente} %>
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> Nombre:</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @residente.detallespersonas.last.nombre %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> Apellido :</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @residente.detallespersonas.last.apellido %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> Edad :</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @residente.detallespersonas.last.edad %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> Cedula :</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @residente.detallespersonas.last.cedula%>
+  </div>
+</div>
+
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> Huela Digital :</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @residente.detallespersonas.last.huella_digital %>
+  </div>
+</div>
+
+<%#= render partial: "detallespersonas/detallespersonas", locals: {personable: @residente} %>
+<%#= render partial: "detallespersonas/form", locals: {personable: @residente} %>
 
 <%= link_to 'Edit', edit_residente_path(@residente) %> |
 <%= link_to 'Back', residentes_path %>
+
+
+<br>
+

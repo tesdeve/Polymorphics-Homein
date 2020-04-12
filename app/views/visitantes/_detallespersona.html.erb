@@ -1,0 +1,25 @@
+<%= form.fields_for :detallespersonas, @visitante.detallespersonas.last.present? ? @visitante.detallespersonas.last : @visitante.detallespersonas.new do |f| %>
+
+	<div class="detallesForm">
+	  <%= f.label :nombre %>
+	  <%= f.text_field :nombre %>
+	</div>
+	<div class="detallesForm">
+	  <%= f.label :apellido %>
+	  <%= f.text_field :apellido %>
+	</div>
+	<div class="detallesForm">
+	  <%= f.label :edad%>
+	  <%= f.text_field :edad %>
+	</div>
+	<div class="detallesForm">
+	  <%= f.label :cedula %>
+	  <%= f.text_field :cedula %>
+	</div>
+	<div class="detallesForm">
+	  <%= f.label :huella_digital %>
+	  <%= f.text_field :huella_digital %>
+	</div>
+
+<% end %>
+

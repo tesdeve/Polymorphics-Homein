@@ -10,11 +10,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :principal %>
-    <%= form.check_box :principal %>
+  <div class="card-body"> 
+    <div class="field">
+      <%= form.label :principal %>
+      <%= form.check_box :principal %>
+    </div>
+    <%#= render 'residentes/detallespersona', form: form %>
+    <%= render 'residentes/detallespersona', form: form %>
   </div>
+
+<br>
+<br>
 
   <div class="actions">
     <%= form.submit %>
