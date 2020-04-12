@@ -69,6 +69,6 @@ class VisitantesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def visitante_params
-      params.fetch(:visitante, {})
+      params.require(:visitante).permit( detallespersonas_attributes: [:id, :nombre, :apellido, :edad, :cedula, :huella_digital])
     end
 end

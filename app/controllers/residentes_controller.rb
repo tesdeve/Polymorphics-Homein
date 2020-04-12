@@ -69,6 +69,6 @@ class ResidentesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def residente_params
-      params.require(:residente).permit(:principal)
+      params.require(:residente).permit(:principal, detallespersonas_attributes: [:id, :nombre, :apellido, :edad, :cedula, :huella_digital])
     end
 end

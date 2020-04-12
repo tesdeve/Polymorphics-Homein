@@ -6,6 +6,11 @@
   <thead>
     <tr>
       <th>Principal</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Edad</th>
+      <th>Cedula</th>
+      <th>Huella Digital</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +19,11 @@
     <% @residentes.each do |residente| %>
       <tr>
         <td><%= residente.principal %></td>
+        <td><%= residente.detallespersonas.last.nombre  %></td>
+        <td><%= residente.detallespersonas.last.apellido  %></td>
+        <td><%= residente.detallespersonas.last.edad  %></td>
+        <td><%= residente.detallespersonas.last.cedula  %></td>
+        <td><%= residente.detallespersonas.last.huella_digital  %></td>
         <td><%= link_to 'Show', residente %></td>
         <td><%= link_to 'Edit', edit_residente_path(residente) %></td>
         <td><%= link_to 'Destroy', residente, method: :delete, data: { confirm: 'Are you sure?' } %></td>

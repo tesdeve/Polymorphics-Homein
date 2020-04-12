@@ -74,6 +74,6 @@ class DetallespersonasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def detallespersona_params
-      params.require(:detallespersona).permit(:personable_id, :personable_type, :nombre, :apellido, :edad, :cedula, :huella_digital)
+      params.require(:detallespersona).permit(:personable_id, :personable_type, :apellido, :edad, :cedula, :huella_digital)
     end
 end
