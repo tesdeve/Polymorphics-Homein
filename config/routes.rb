@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contactos
   root "visitantes#index"
   
   resources :residentes do 

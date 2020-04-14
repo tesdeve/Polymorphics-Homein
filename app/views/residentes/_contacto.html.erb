@@ -1,0 +1,13 @@
+<%= form.fields_for :contacto, @residente.contacto.present? ? @residente.contacto : Contacto.new do |f| %>
+
+	<div class="detallesForm">
+	  <%= f.label :telefono %>
+	  <%= f.text_field :telefono %>
+	</div>
+	<div class="detallesForm">
+	  <%= f.label :email %>
+	  <%= f.text_field :email %>
+	</div>
+	
+
+<% end %>

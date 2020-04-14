@@ -45,9 +45,26 @@
 <div class="row">
   <div class="d-inline col-sm-6 company-Showlabels ">
      <b> Huela Digital :</b>
+</div>
+<div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @residente.detallespersonas.last.huella_digital %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> Telefono :</b>
   </div>
   <div class="d-inline col-sm-6 mb-3 company-Showinputs">
-   <%= @residente.detallespersonas.last.huella_digital %>
+   <%= @residente.contacto.telefono %>
+  </div>
+</div>
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> E-mail :</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @residente.contacto.email %>
   </div>
 </div>
 

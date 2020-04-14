@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_04_094057) do
+ActiveRecord::Schema.define(version: 2020_04_12_060816) do
+
+  create_table "contactos", force: :cascade do |t|
+    t.string "contactable_type", null: false
+    t.integer "contactable_id", null: false
+    t.string "telefono"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["contactable_type", "contactable_id"], name: "index_contactos_on_contactable_type_and_contactable_id"
+  end
 
   create_table "detallespersonas", force: :cascade do |t|
     t.string "personable_type", null: false
