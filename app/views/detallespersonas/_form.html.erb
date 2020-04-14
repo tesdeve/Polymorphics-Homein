@@ -13,7 +13,8 @@
   </div>
 <%# end %> -->
 
-<%#= form.fields_for :detallespersonas, personable.detallespersonas.last.present? ? personable.detallespersonas.last : personable.detallespersonas.new do |f| %>
+<%#= form.fields_for :detallespersonas, personable.detallespersonas.last.present? ? personable.detallespersonas.last : 
+	Detallespersona.new do |f| %>
 
   <%#= f.label :nombre %>
   <%#= f.text_field :nombre %>

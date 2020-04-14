@@ -13,6 +13,11 @@
   <% end %>
     
     <%= render 'visitantes/detallespersona', form: form %>
+<br>
+    <%#= render partial: "detallespersonas/form", locals: {personable: @visitante}, form: form  %>
+     <br>
+    <%= render 'visitantes/contacto', form: form %>
+
     <div class="actions">
       <%= form.submit %>
     </div>

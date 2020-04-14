@@ -46,7 +46,22 @@
    <%= @visitante.detallespersonas.last.huella_digital %>
   </div>
 </div>
-
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> Telefono :</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @visitante.contacto.telefono %>
+  </div>
+</div>
+<div class="row">
+  <div class="d-inline col-sm-6 company-Showlabels ">
+     <b> E-mail :</b>
+  </div>
+  <div class="d-inline col-sm-6 mb-3 company-Showinputs">
+   <%= @visitante.contacto.email %>
+  </div>
+</div>
 
 
 
