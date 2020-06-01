@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_060816) do
+ActiveRecord::Schema.define(version: 2020_04_17_124536) do
+
+  create_table "conjuntos", force: :cascade do |t|
+    t.string "nombre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "contactos", force: :cascade do |t|
     t.string "contactable_type", null: false
@@ -19,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_04_12_060816) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "celular"
     t.index ["contactable_type", "contactable_id"], name: "index_contactos_on_contactable_type_and_contactable_id"
   end
 
@@ -35,6 +42,19 @@ ActiveRecord::Schema.define(version: 2020_04_12_060816) do
     t.index ["personable_type", "personable_id"], name: "index_detallespersonas_on_personable_type_and_personable_id"
   end
 
+  create_table "propiedads", force: :cascade do |t|
+    t.string "propiedad_type"
+    t.integer "conjunto_id", null: false
+    t.integer "residente_id", null: false
+    t.string "edificio"
+    t.string "identificador"
+    t.string "parqueaderos"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["conjunto_id"], name: "index_propiedads_on_conjunto_id"
+    t.index ["residente_id"], name: "index_propiedads_on_residente_id"
+  end
+
   create_table "residentes", force: :cascade do |t|
     t.boolean "principal"
     t.datetime "created_at", precision: 6, null: false
@@ -46,4 +66,6 @@ ActiveRecord::Schema.define(version: 2020_04_12_060816) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "propiedads", "conjuntos"
+  add_foreign_key "propiedads", "residentes"
 end

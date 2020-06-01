@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Propiedad type:</strong>
+  <%= @propiedad.propiedad_type %>
+</p>
+
+<p>
+  <strong>Conjunto:</strong>
+  <%= @propiedad.conjunto_id %>
+</p>
+
+<p>
+  <strong>Residente:</strong>
+  <%= @propiedad.residente_id %>
+</p>
+
+<p>
+  <strong>Edificio:</strong>
+  <%= @propiedad.edificio %>
+</p>
+
+<p>
+  <strong>Identificador:</strong>
+  <%= @propiedad.identificador %>
+</p>
+
+<p>
+  <strong>Parqueaderos:</strong>
+  <%= @propiedad.parqueaderos %>
+</p>
+
+<%= link_to 'Edit', edit_propiedad_path(@propiedad) %> |
+<%= link_to 'Back', propiedads_path %>

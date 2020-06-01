@@ -71,6 +71,6 @@ class ResidentesController < ApplicationController
     def residente_params
       params.require(:residente).permit(:principal, 
         detallespersonas_attributes: [:id, :nombre, :apellido, :edad, :cedula, :huella_digital], 
-        contacto_attributes: [:id, :telefono, :email])
+        contacto_attributes: [:id, :telefono, :email, :celular])
     end
 end

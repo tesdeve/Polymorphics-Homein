@@ -70,6 +70,6 @@ class VisitantesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def visitante_params
       params.require(:visitante).permit( detallespersonas_attributes: [:id, :nombre, :apellido, :edad, :cedula, :huella_digital],
-       contacto_attributes: [:id, :telefono, :email])
+       contacto_attributes: [:id, :telefono, :email, :celular])
     end
 end

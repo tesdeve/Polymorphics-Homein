@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  propiedad_type: MyString
+  conjunto: one
+  residente: one
+  edificio: MyString
+  identificador: MyString
+  parqueaderos: MyString
+
+two:
+  propiedad_type: MyString
+  conjunto: two
+  residente: two
+  edificio: MyString
+  identificador: MyString
+  parqueaderos: MyString

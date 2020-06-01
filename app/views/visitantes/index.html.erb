@@ -10,7 +10,8 @@
       <th>Edad</th>
       <th>Cedula</th>
       <th>Huella Digital</th>
-       <th>Telefono</th>
+      <th>Telefono</th>
+      <th>Celular</th>
       <th>Email</th>
       <th colspan="3"></th>
     </tr>
@@ -24,6 +25,7 @@
         <td><%= visitante.detallespersonas.last.cedula  %></td>
         <td><%= visitante.detallespersonas.last.huella_digital  %></td>
         <td><%= visitante.contacto.telefono %></td>
+        <td><%= visitante.contacto.celular %></td>
         <td><%= visitante.contacto.email %></td>
         <td><%= link_to 'Show', visitante %></td>
         <td><%= link_to 'Edit', edit_visitante_path(visitante) %></td>

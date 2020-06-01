@@ -76,6 +76,6 @@ class ContactosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contacto_params
-      params.require(:contacto).permit(:contactable_id, :contactable_type, :telefono, :email)
+      params.require(:contacto).permit(:contactable_id, :contactable_type, :telefono, :email, :celular)
     end
 end

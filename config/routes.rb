@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :propiedads
+  resources :conjuntos
   resources :contactos
   root "visitantes#index"
   
